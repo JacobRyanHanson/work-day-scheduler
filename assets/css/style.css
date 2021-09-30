@@ -32,6 +32,10 @@ textarea {
 	width: 80%;
 }
 
+.empty {
+	margin-top: 50%;
+}
+
 .time-block {
 	text-align: center;
 	border-radius: 15px;
@@ -44,7 +48,7 @@ textarea {
 	border-top: 1px solid white;
 }
 
-.row > * {
+.row>* {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -91,4 +95,14 @@ textarea {
 
 .background-light {
 	background-color: #cccccc;
+}
+
+.time-block input {
+	width: 100%;
+	text-align: center;
+	border: none;
+}
+
+input:focus {
+	outline: none;
 }
