@@ -45,8 +45,6 @@ function auditDescription(descriptionEL) {
     descriptionEL.parentElement.classList.remove("bg-success");
     descriptionEL.parentElement.classList.remove("bg-danger");
 
-console.log(descriptionEL.children)
-
     if (time.format("h a").toUpperCase() === moment().format("h a").toUpperCase()) {
         descriptionEL.parentElement.classList.add("bg-success");
         if (descriptionEL.children.length > 0) {
@@ -106,10 +104,12 @@ function loadPage() {
 
     auditPage();
 
-    for (var i = 0; i < savedDescriptions.length; i++) {
-        for (var j = 0; j < timeBlocks.length; j++) {
-            if (timeBlocks[j].textContent === savedDescriptions[i].time) {
-                descriptions[j].textContent = savedDescriptions[i].description;
+    if (savedDescriptions) {
+        for (var i = 0; i < savedDescriptions.length; i++) {
+            for (var j = 0; j < timeBlocks.length; j++) {
+                if (timeBlocks[j].textContent === savedDescriptions[i].time) {
+                    descriptions[j].textContent = savedDescriptions[i].description;
+                }
             }
         }
     }
