@@ -99,7 +99,7 @@ function exists(time) {
 }
 // Populates each description approperatly given an array of saved descriptions.
 function loadPage() {
-    var savedDescriptions = JSON.parse(localStorage.getItem("descriptions"));
+    savedDescriptions = JSON.parse(localStorage.getItem("descriptions"));
     var descriptions = document.querySelectorAll(".description");
     var timeBlocks = document.querySelectorAll(".hour");
 
